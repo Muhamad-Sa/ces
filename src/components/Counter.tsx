@@ -15,7 +15,7 @@ const Counter = () => {
           <div className="row justify-content-center text-center">
             <div className="col-xl-7 col-lg-8 col-md-10">
               <div className="section-title mb-55">
-                <span className="sub-title">Results / Impact</span>
+                {/* <span className="sub-title">Results / Impact</span> */}
                 <h2>What You Can Expect</h2>
               </div>
             </div>
@@ -23,7 +23,11 @@ const Counter = () => {
           <div className="row">
             {results.map((result, index) => (
               <div key={index} className="col-xl-4 col-md-6">
+                {/* <div className="success-item">
+                  <p>{result}</p>
+                </div> */}
                 <div className="success-item">
+                  <span className="bullet"></span>
                   <p>{result}</p>
                 </div>
               </div>
