@@ -3,27 +3,27 @@ const Services = () => {
     {
       icon: 'flaticon-data-analysis',
       title: 'Customer Support',
-      description: 'Deliver fast, professional support across all channels. Inbound & outbound calls, Live chat support, Email handling, Ticket management.',
+      description: 'Deliver fast, professional support across every channel. Handle inbound and outbound calls, live chat, emails, and customer inquiries.',
     },
     {
       icon: 'flaticon-monitoring',
       title: 'Sales & Cold Calling',
-      description: 'We help you reach more prospects and book qualified opportunities. Cold calling, Appointment setting, Lead generation, Follow-ups.',
+      description: 'Reach more prospects and create qualified opportunities. We handle cold calling, appointment setting, lead generation, and follow-ups.',
     },
     {
       icon: 'flaticon-fast-delivery',
       title: 'Virtual Assistants',
-      description: 'From admin tasks to daily operations, we handle the workload so you can focus on growth. Admin & back-office work, Calendar & email management, Data entry & reporting, Personal assistance.',
+      description: 'Take daily tasks off your plate. We handle admin work, data entry, scheduling, emails, and other essential back-office operations.',
     },
     {
       icon: 'flaticon-fast-delivery',
       title: 'Performance Tracking',
-      description: 'Get full visibility and control over your operations. Daily & weekly performance reports, KPI tracking, Call reviews & insights, Process optimization.',
+      description: 'Stay in control with clear performance insights. Track KPIs, review call activity, monitor results, and identify opportunities to improve.',
     },
     {
       icon: 'flaticon-fast-delivery',
       title: 'Data Sourcing & Skip Tracing',
-      description: 'From admin tasks to daily operations, we handle the workload so you can focus on growth. Single and Bulk, Skip tracing (phone numbers, emails, owner data), Contact data enrichment, Prospect list building.',
+      description: 'Build better prospect lists with accurate data. We provide data sourcing, skip tracing, contact enrichment, and targeted list building.',
     },
   ];
 
@@ -38,16 +38,16 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="row align-items-center">
+        <div className="row align-items-stretch">
           {services.map((service, index) => (
-            <div key={index} className="col-xl-3 col-md-6">
-              <div className="solution-item">
-                <div className="solution-content">
+            <div key={index} className="col-xl col-md-6 mb-4 d-flex">
+              <div className="solution-item d-flex flex-column h-100 w-100">
+                <div className="solution-content justify-content-center align-item-center flex-wrap text-center">
                   <i className={service.icon}></i>
                   <h3><a href="single-service.html">{service.title}</a></h3>
-                  <p>{service.description}</p>
+                  <p className="mb-0 me-2 small text-muted text-center px-3">{service.description}</p>
                 </div>
-                <a href="single-service.html" className="learn-more">Learn More <i className="fas fa-arrow-right"></i></a>
+                <a href="single-service.html" className="learn-more mt-1 fw-bold">Learn More <i className="fas fa-arrow-right"></i></a>
               </div>
             </div>
           ))}
