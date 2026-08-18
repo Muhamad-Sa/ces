@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const ServicesTab = () => {
   const tabs = [
     {
@@ -51,7 +53,7 @@ const ServicesTab = () => {
       },
     },
   ];
-
+  const [activeTab, setActiveTab] = useState('design')
   return (
     <section className="services-section rel z-3 py-130 rpy-100" id="service">
       <div className="container">
@@ -67,13 +69,22 @@ const ServicesTab = () => {
           <ul className="nav nav-pills nav-fill mb-50">
             {tabs.map((tab) => (
               <li key={tab.id} className="nav-item">
-                <a className={`nav-link ${tab.id === 'design' ? 'active' : ''}`} data-toggle="tab" href={`#${tab.id}`}>{tab.title}</a>
+                <a
+                  href="#"
+                  className={`nav-link ${activeTab === tab.id ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.preventDefault(); // prevent page jump
+                    setActiveTab(tab.id);
+                  }}
+                >
+                  {tab.title}
+                </a>
               </li>
             ))}
           </ul>
           <div className="tab-content">
             {tabs.map((tab) => (
-              <div key={tab.id} className={`tab-pane fade ${tab.id === 'design' ? 'show active' : ''}`} id={tab.id}>
+              <div key={tab.id} className={`tab-pane fade ${activeTab === tab.id ? 'show active' : ''}`} id={tab.id}>
                 <div className="row align-items-center">
                   <div className="col-lg-5">
                     <div className="service-content rmb-55">

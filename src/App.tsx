@@ -24,7 +24,7 @@ function App() {
       <Features />
       <ServicesTab />
       <Newsletter />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Blogs />
       <Footer />
 
