@@ -1,4 +1,4 @@
-const Features = () => {
+ const Features = () => {
   const features = [
     {
       icon: 'flaticon-layers',
