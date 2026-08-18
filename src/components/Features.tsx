@@ -1,4 +1,4 @@
-const Features = () => {
+ const Features = () => {
   const features = [
     {
       icon: 'flaticon-layers',
@@ -36,7 +36,7 @@ const Features = () => {
     <section className="features-section bg-lighter rel z-1 pt-215 rpt-150 pb-130 rpb-100">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-8">
             <div className="feature-content rpt-35 rmb-55">
               <div className="section-title mb-35">
                 <span className="sub-title">Why Choose Us</span>
@@ -47,7 +47,7 @@ const Features = () => {
                   <div key={index} className="col-xl-6 col-lg-12 col-md-6">
                     <div className="feature-item">
                       <i className={feature.icon}></i>
-                      <div className="content">
+                      <div className="content d-flex flex-column justify-content-center">
                         <h4>{feature.title}</h4>
                         <p>{feature.description}</p>
                       </div>
@@ -58,7 +58,7 @@ const Features = () => {
               <a href="contact.html" className="theme-btn style-three mt-15">Get Started <i className="fas fa-arrow-right"></i></a>
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-4">
             <div className="feature-images">
               <img className="first z-1 slideUpDown" src="/assets/images/features/feature1.png" alt="Feature" />
               <img className="second z-2 slideLeftRight" src="/assets/images/features/feature2.png" alt="Feature" />
