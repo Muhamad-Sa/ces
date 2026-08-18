@@ -24,7 +24,6 @@ function App() {
       <Features />
       <ServicesTab />
       <Newsletter />
-      {/* <Testimonials /> */}
       <Blogs />
       <Footer />
 
