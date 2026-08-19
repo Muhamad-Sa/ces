@@ -18,8 +18,8 @@ const Newsletter = () => {
                   </div>
                   <div className="newsletter-radios">
                     <div className="custom-control custom-radio">
-                      <input type="radio" className="custom-control-input" id="wekly" name="example1" defaultChecked />
-                      <label className="custom-control-label" htmlFor="wekly">Wekly Updates</label>
+                      <input type="radio" className="custom-control-input" id="weekly" name="example1" defaultChecked />
+                      <label className="custom-control-label" htmlFor="weekly">Weekly Updates</label>
                     </div>
                     <div className="custom-control custom-radio">
                       <input type="radio" className="custom-control-input" id="monthly" name="example1" />
