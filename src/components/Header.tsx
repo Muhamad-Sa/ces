@@ -66,7 +66,7 @@ const Header = () => {
                 <option value="Bengali">Bengali</option>
                 <option value="Arabic">Arabic</option>
               </select> */}
-              <a href="https://calendly.com/contactedgesolutions/30min" className="theme-btn style-two">Get Started <i className="fas fa-arrow-right"></i></a>
+              <a href="https://calendly.com/contactedgesolutions/30min" target="_blank" rel="noopener noreferrer" className="theme-btn style-two">Get Started <i className="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
