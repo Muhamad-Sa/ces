@@ -61,11 +61,11 @@ const Header = () => {
               </div>
 
               {/* Language Changer */}
-              <select name="language" id="language" aria-label="Select language">
+              {/* <select name="language" id="language" aria-label="Select language">
                 <option value="English">English</option>
                 <option value="Bengali">Bengali</option>
                 <option value="Arabic">Arabic</option>
-              </select>
+              </select> */}
               <a href="contact.html" className="theme-btn style-two">Get Started <i className="fas fa-arrow-right"></i></a>
             </div>
           </div>
