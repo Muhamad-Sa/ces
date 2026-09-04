@@ -52,13 +52,13 @@ const Header = () => {
 
             <div className="menu-right d-none d-lg-flex align-items-center ml-lg-auto">
               {/* Menu Serch Box */}
-              <div className="nav-search">
+              {/* <div className="nav-search">
                 <button className="fa fa-search"></button>
                 <form action="#" className="hide">
                   <input type="text" placeholder="Search" className="searchbox" required />
                   <button type="submit" className="searchbutton fa fa-search"></button>
                 </form>
-              </div>
+              </div> */}
 
               {/* Language Changer */}
               {/* <select name="language" id="language" aria-label="Select language">
