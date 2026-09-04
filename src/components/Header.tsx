@@ -1,6 +1,21 @@
+import { useEffect, useState } from 'react';
+
 const Header = () => {
+  const [isNearTop, setIsNearTop] = useState(true);
+
+  useEffect(() => {
+    const updateHeaderVisibility = () => {
+      setIsNearTop(window.scrollY <= 150);
+    };
+
+    updateHeaderVisibility();
+    window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+
+    return () => window.removeEventListener('scroll', updateHeaderVisibility);
+  }, []);
+
   return (
-    <header className="main-header">
+    <header className={`main-header${isNearTop ? ' near-page-top' : ''}`}>
       {/* Header-Upper */}
       <div className="header-upper">
         <div className="container clearfix">
@@ -46,11 +61,11 @@ const Header = () => {
               </div>
 
               {/* Language Changer */}
-              <select name="language" id="language">
+              {/* <select name="language" id="language" aria-label="Select language">
                 <option value="English">English</option>
                 <option value="Bengali">Bengali</option>
                 <option value="Arabic">Arabic</option>
-              </select>
+              </select> */}
               <a href="contact.html" className="theme-btn style-two">Get Started <i className="fas fa-arrow-right"></i></a>
             </div>
           </div>
