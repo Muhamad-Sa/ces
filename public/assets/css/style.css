@@ -1391,7 +1391,7 @@ a.theme-btn.style-five:hover {
 }
 
 .services-tab .nav .nav-link {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     border-radius: 0;
     padding-top: 16px;
@@ -3000,6 +3000,113 @@ blockquote .name-designation .designation {
 .call-to-action-btns .theme-btn:not(:last-child) {
     border: 2px solid white;
     margin-right: 15px;
+}
+
+/* Container Box Padding */
+.service-widget.service-list {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #eef0f6;
+  border-radius: 12px;
+}
+
+.service-widget.service-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Adds clean spacing between items */
+}
+
+/* Base button item styles (Inactive State) */
+.service-widget.service-list ul li button,
+.service-widget.service-list ul li .btn-link-style {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #f8f8fc;
+  color: #1a1a2e;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  outline: none;
+}
+
+.service-widget.service-list ul li button i,
+.service-widget.service-list ul li .btn-link-style i {
+  font-size: 14px;
+  color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+/* Hover State */
+.service-widget.service-list ul li button:hover,
+.service-widget.service-list ul li .btn-link-style:hover {
+  background-color: #eeeef8;
+}
+
+/* Active State (Selected Item - Blue/Purple Highlight) */
+.service-widget.service-list ul li.active button,
+.service-widget.service-list ul li.active .btn-link-style {
+  background-color: #5136f1; /* Adjust shade to match your brand color */
+  color: #ffffff;
+}
+
+.service-widget.service-list ul li.active button i,
+.service-widget.service-list ul li.active .btn-link-style i {
+  color: #ffffff;
+}
+
+/* Custom Sub Feature Card Layout */
+.sub-feature-card {
+  text-align: center;
+  padding: 10px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+/* Dedicated Icon Box styling */
+.sub-feature-card .feature-icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-feature-card .feature-icon-box i {
+  font-size: 48px !important;
+  color: #5136f1 !important; /* Bright purple matching reference design */
+  line-height: 1 !important;
+  display: block;
+}
+
+.sub-feature-card .feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.sub-feature-card .feature-title a {
+  color: #1a1a2e;
+  text-decoration: none;
+}
+
+.sub-feature-card .feature-desc {
+  font-size: 15px;
+  color: #6a6e82;
+  line-height: 1.6;
+  margin: 0 auto;
 }
 
 .call-to-action-btns .theme-btn.style-three {
