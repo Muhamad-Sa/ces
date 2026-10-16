@@ -1,59 +1,57 @@
 import { useState } from "react"; 
+import { Link } from 'react-router-dom';
 
 const ServicesTab = () => {
   const tabs = [
     {
       id: 'design',
-      title: 'Design & Development',
+      title: '💬 Customer Support',
       content: {
-        title: 'Creative Designer Professional Developer Are Made Easy',
-        description: 'Sed ut perspiciatis unde omnis istee sit voluptatem accusantium doloremque laudantium aperiam eaque ipsa quae abillo inventore veritatis',
-        list: ['30-day free trial of our premium plan', '100% Free - No payments required', 'Lifetime Upgradate'],
+        description: 'Deliver fast, professional support across all channels.',
+        list: ['Inbound & outbound calls', 'Live chat support', 'Email handling', 'Ticket management'],
         image: '/assets/images/services/service-chart.png',
       },
     },
     {
       id: 'software',
-      title: 'Software & Equipments',
+      title: '📞 Sales & Cold Calling',
       content: {
-        title: 'Let’s See Awesome Software UI Design Scrrenshot',
-        description: 'Sed ut perspiciatis unde omnis istee sit voluptatem accusantium doloremque laudantium aperiam eaque ipsa quae abillo inventore veritatis',
-        list: ['30-day free trial of our premium plan', '100% Free - No payments required', 'Lifetime Upgradate'],
+        description: 'We help you reach more prospects and book qualified opportunities.',
+        list: ['Cold calling', 'Appointment setting', 'Lead generation', 'Follow-ups'],
         image: '/assets/images/services/service-tab-2.png',
       },
     },
     {
       id: 'members',
-      title: 'Team Members & Tools',
+      title: '🧑‍💻 Virtual Assistants',
       content: {
-        title: 'Creative Designer Professional Developer Are Made Easy',
-        description: 'Sed ut perspiciatis unde omnis istee sit voluptatem accusantium doloremque laudantium aperiam eaque ipsa quae abillo inventore veritatis',
-        list: ['30-day free trial of our premium plan', '100% Free - No payments required', 'Lifetime Upgradate'],
+        description: 'From admin tasks to daily operations, we handle the workload so you can focus on growth.',
+        list: ['Admin & back-office work', 'Calendar & email management', 'Data entry & reporting', 'Personal assistance'],
         image: '/assets/images/about/borwser-support.jpg',
       },
     },
     {
       id: 'analysis',
-      title: 'Market Analysis',
+      title: '📊 Performance Tracking',
       content: {
-        title: 'Contact Us to Get Your 7days Free Trial Version',
-        description: 'Sed ut perspiciatis unde omnis istee sit voluptatem accusantium doloremque laudantium aperiam eaque ipsa quae abillo inventore veritatis',
-        list: ['30-day free trial of our premium plan', '100% Free - No payments required', 'Lifetime Upgradate'],
+        description: 'Get full visibility and control over your operations.',
+        list: ['Daily & weekly performance reports', 'KPI tracking', 'Call reviews & insights', 'Process optimization'],
         image: '/assets/images/services/service-dashboard.jpg',
       },
     },
     {
       id: 'activity',
-      title: 'User Activity',
+      title: '🔍 Data Sourcing & Skip Tracing',
       content: {
-        title: 'Everything You Want To Know About Voice User Interfaces',
-        description: 'Sed ut perspiciatis unde omnis istee sit voluptatem accusantium doloremque laudantium aperiam eaque ipsa quae abillo inventore veritatis',
-        list: ['30-day free trial of our premium plan', '100% Free - No payments required', 'Lifetime Upgradate'],
+        description: 'From admin tasks to daily operations, we handle the workload so you can focus on growth.',
+        list: ['Single and Bulk', 'Skip tracing (phone numbers, emails, owner data)', 'Contact data enrichment', 'Prospect list building'],
         image: '/assets/images/dashboard-screenshots/dashboard-screenshot1.jpg',
       },
     },
   ];
-  const [activeTab, setActiveTab] = useState('design')
+
+  const [activeTab, setActiveTab] = useState('design');
+
   return (
     <section className="services-section rel z-3 py-130 rpy-100" id="service">
       <div className="container">
@@ -61,7 +59,7 @@ const ServicesTab = () => {
           <div className="col-xl-6 col-lg-8 col-md-10">
             <div className="section-title mb-40">
               <span className="sub-title">Services We Provide</span>
-              <h2>Custom Made Reports to Make Great Decisions</h2>
+              <h2>Everything You Need to Scale In One Place</h2>
             </div>
           </div>
         </div>
@@ -88,14 +86,16 @@ const ServicesTab = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-5">
                     <div className="service-content rmb-55">
-                      <h3>{tab.content.title}</h3>
                       <p>{tab.content.description}</p>
                       <ul className="list-style-one">
                         {tab.content.list.map((item, index) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
-                      <a href="single-service.html" className="read-more mt-25">Read More <i className="fas fa-arrow-right"></i></a>
+                      {/* Step 4: Updated to use React Router Link */}
+                      <Link to="/single-service" className="read-more mt-25">
+                        Read More <i className="fas fa-arrow-right"></i>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-lg-7">
